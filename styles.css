@@ -1,0 +1,128 @@
+body {
+    font-family: 'Pacifico', Helvetica, sans-serif;
+    color: #2b2b2b;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1), 7px 7px 0px rgba(0, 0, 0, 0.05);
+}
+
+#title {
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    #title {
+        font-size: 18px;
+    }
+}
+
+.red {
+    color: red;
+}
+
+#full {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+#images li {
+    list-style: none;
+    float: left;
+}
+
+#images {
+    /* Prevent vertical gaps */
+    line-height: 0;
+    -webkit-column-count: 8;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 8;
+    -moz-column-gap: 0px;
+    column-count: 8;
+    column-gap: 0px;
+}
+
+#images img {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media (max-width: 1200px) {
+    #images {
+        -moz-column-count: 7;
+        -webkit-column-count: 7;
+        column-count: 7;
+    }
+}
+
+@media (max-width: 1000px) {
+    #images {
+        -moz-column-count: 6;
+        -webkit-column-count: 6;
+        column-count: 6;
+    }
+}
+
+@media (max-width: 800px) {
+    #images {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media (max-width: 400px) {
+    #images {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+
+/* Flaired edges, by Tomas Theunissen */
+
+hr.style-seven {
+    overflow: visible;
+    /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+hr.style-seven:before {
+    /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+#previous {
+    font-size: 40px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+}
+
+#next {
+    font-size: 40px;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 30%;
+}
